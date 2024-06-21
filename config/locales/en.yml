@@ -29,3 +29,11 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              invalid_password_format: "must include at least one lowercase letter, one uppercase letter, and one digit."
+              consecutive_repeating_characters: "cannot contain three consecutive repeating characters."

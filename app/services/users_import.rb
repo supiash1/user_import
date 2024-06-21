@@ -1,6 +1,6 @@
 # The UsersImport class imports users from a CSV file, processing each record to create User instances.
 class UsersImport
-  def initialize(file_path, file_reader_service = CSVFileReaderService.new(file_path))
+  def initialize(file_reader_service = CSVFileReaderService.new(file_path))
     @file_reader_service = file_reader_service
   end
 

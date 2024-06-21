@@ -26,7 +26,7 @@ RSpec.describe UsersImport do
                                                ['Jane Doe', 'Failed -  Password must include at least one lowercase letter, one uppercase letter, and one digit.']])
     end
     it 'processes user data in users.csv and returns headers and results' do
-      importer = UsersImport.new(file_path, CsvFileReader.new(file_path))
+      importer = UsersImport.new(CsvFileReader.new(file_path))
       result = importer.call
       expect(result[:headers]).to match_array(%w[name status])
       expect(result[:results]).to match_array([['Muhammad', 'Success'],

@@ -7,5 +7,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  root 'welcome#index'
+  root 'users#upload_csv'
+  resources :users do
+    collection do
+      get :upload_csv, to: 'users#upload_csv'
+      post :import, to: 'users#import'
+    end
+  end
 end

@@ -1,0 +1,6 @@
+<%= form_tag(import_users_path, method: :post, multipart: true, remote: true, id: 'csv-import-form') do %>
+  <%= file_field_tag :file, accept: '.csv' %>
+  <%= submit_tag 'Import CSV' %>
+<% end %>
+
+<div id="import-results"></div>

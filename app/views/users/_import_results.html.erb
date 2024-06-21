@@ -1,0 +1,24 @@
+<% if @user_imports[:results].present? %>
+  <table>
+    <thead>
+      <tr>
+        <% @user_imports[:headers].each do |header| %>
+          <th><%= header %></th>
+        <% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <% @user_imports[:results].each do |result| %>
+        <tr>
+          <% result.each do |value| %>
+            <td>
+              <%= value %>
+            </td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>No results to display.</p>
+<% end %>
